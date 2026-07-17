@@ -37,7 +37,14 @@ export ANTIGRAVITY_LS_ADDRESS='http://localhost:61727'
 export ANTIGRAVITY_PROJECT_ID='default-cli-project'
 ```
 
-Это machine-specific значения. На другой машине их нужно получить из локального Antigravity runtime, а не копировать вслепую.
+На Windows можно задать их постоянно для текущего пользователя так:
+
+```powershell
+[Environment]::SetEnvironmentVariable('ANTIGRAVITY_LS_ADDRESS','http://localhost:61727','User')
+[Environment]::SetEnvironmentVariable('ANTIGRAVITY_PROJECT_ID','default-cli-project','User')
+```
+
+После этого нужно открыть новый PowerShell / новый Hermes process. Это machine-specific значения. На другой машине их нужно получить из локального Antigravity runtime, а не копировать вслепую.
 
 ## Реализованная архитектура
 

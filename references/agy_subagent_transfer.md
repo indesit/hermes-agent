@@ -75,6 +75,13 @@ export ANTIGRAVITY_LS_ADDRESS='<local Antigravity service URL>'
 export ANTIGRAVITY_PROJECT_ID='<local project id>'
 ```
 
+На Windows можно закрепить их для текущего пользователя так:
+
+```powershell
+[Environment]::SetEnvironmentVariable('ANTIGRAVITY_LS_ADDRESS','http://localhost:61727','User')
+[Environment]::SetEnvironmentVariable('ANTIGRAVITY_PROJECT_ID','default-cli-project','User')
+```
+
 На исходной машине подтверждены:
 
 ```text
